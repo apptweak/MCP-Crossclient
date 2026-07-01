@@ -1,0 +1,18 @@
+{
+  "name": "apptweak-mcp-plugins",
+  "owner": {
+    "name": "AppTweak",
+    "email": "support@apptweak.com"
+  },
+  "metadata": {
+    "description": "Official AppTweak MCP plugins for Cursor",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "apptweak-api",
+      "source": "./plugins/cursor",
+      "description": "AppTweak API MCP integration for Cursor"
+    }
+  ]
+}

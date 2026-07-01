@@ -1,0 +1,13 @@
+{
+  "name": "apptweak-api",
+  "displayName": "AppTweak API",
+  "version": "0.1.0",
+  "description": "Connect Cursor to the AppTweak API via MCP. Requires a per-user API key.",
+  "author": {
+    "name": "AppTweak",
+    "email": "support@apptweak.com"
+  },
+  "license": "MIT",
+  "keywords": ["cursor", "mcp", "apptweak", "api", "aso"],
+  "homepage": "https://developers.apptweak.com/reference/mcp-1"
+}
