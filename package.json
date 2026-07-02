@@ -1,7 +1,7 @@
 {
   "name": "mcp-crossclient",
   "private": true,
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Official AppTweak MCP integrations for Cursor, Claude Code, and Codex",
   "license": "GPL-3.0-only",
   "type": "module",

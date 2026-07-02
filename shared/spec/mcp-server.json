@@ -1,6 +1,6 @@
 {
   "$comment": "Canonical AppTweak MCP server definition. Referenced by all client plugins and setup guides.",
-  "serverKey": "apptweak api",
+  "serverKey": "apptweak-api",
   "endpoint": "https://developers.apptweak.com/mcp",
   "docsUrl": "https://developers.apptweak.com/reference/mcp-1",
   "apiKeyUrl": "https://www.apptweak.com/en/aso-tools/api",
@@ -20,7 +20,7 @@
     "placeholder": "YOUR_APPTWEAK_API_KEY"
   },
   "mcpServers": {
-    "apptweak api": {
+    "apptweak-api": {
       "command": "npx",
       "args": [
         "-y",

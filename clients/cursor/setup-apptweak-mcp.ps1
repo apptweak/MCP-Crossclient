@@ -4,7 +4,8 @@ param(
 
 $ErrorActionPreference = "Stop"
 $ConfigPath = if ($env:CURSOR_MCP_CONFIG) { $env:CURSOR_MCP_CONFIG } else { "$env:USERPROFILE\.cursor\mcp.json" }
-$ServerKey = "apptweak api"
+$ServerKey = "apptweak-api"
+$LegacyServerKey = "apptweak api"
 $RepoRoot = Split-Path (Split-Path $PSScriptRoot -Parent) -Parent
 
 if (-not $ApiKey -or $ApiKey -eq "YOUR_APPTWEAK_API_KEY") {
@@ -14,7 +15,7 @@ if (-not $ApiKey -or $ApiKey -eq "YOUR_APPTWEAK_API_KEY") {
 }
 
 $spec = Get-Content "$RepoRoot\shared\spec\mcp-server.json" | ConvertFrom-Json
-$newServer = $spec.mcpServers.'apptweak api' | ConvertTo-Json -Depth 10 | ConvertFrom-Json
+$newServer = $spec.mcpServers.'apptweak-api' | ConvertTo-Json -Depth 10 | ConvertFrom-Json
 $newServer.env.APPTWEAK_API_KEY = $ApiKey
 
 $dir = Split-Path $ConfigPath -Parent
@@ -26,7 +27,8 @@ if (Test-Path $ConfigPath) {
   try { $config = Get-Content $ConfigPath | ConvertFrom-Json } catch { $config = @{ mcpServers = @{} } }
 }
 if (-not $config.mcpServers) { $config = @{ mcpServers = @{} } }
-$config.mcpServers.$ServerKey = $newServer
+$config.mcpServers.PSObject.Properties.Remove($LegacyServerKey)
+$config.mcpServers | Add-Member -NotePropertyName $ServerKey -NotePropertyValue $newServer -Force
 $config | ConvertTo-Json -Depth 10 | Set-Content $ConfigPath
 
 Write-Host "AppTweak MCP configured at: $ConfigPath"

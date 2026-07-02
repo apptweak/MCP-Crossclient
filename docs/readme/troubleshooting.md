@@ -17,6 +17,7 @@ Common issues when setting up AppTweak MCP across Cursor, Claude Code, and Codex
 
 ### Cursor
 
+- **Invalid server name**: Cursor requires MCP server names to match `^[a-zA-Z0-9_-]+$`. Use `apptweak-api`, not `apptweak api`.
 - **Server not appearing**: Restart Cursor after editing `~/.cursor/mcp.json`.
 - **Wrong config path on Windows**: Use `%USERPROFILE%\.cursor\mcp.json`.
 
@@ -30,12 +31,12 @@ Common issues when setting up AppTweak MCP across Cursor, Claude Code, and Codex
 
 - **Project config ignored**: Project must be trusted. Untrusted projects skip `.codex/config.toml`.
 - **Plugin not in directory**: Run `codex plugin marketplace list` to verify marketplace is loaded. Restart Codex.
-- **TOML syntax error**: Ensure the server key is quoted: `[mcp_servers."apptweak api"]`.
+- **TOML syntax error**: Ensure the server section header is `[mcp_servers.apptweak-api]`.
 
 ## Quick verification
 
 - Restart your client after config changes.
-- Confirm the server name appears as `apptweak api`.
+- Confirm the server name appears as `apptweak-api`.
 - If needed, remove and re-add the MCP server with your current `APPTWEAK_API_KEY`.
 
 ## Security reminders

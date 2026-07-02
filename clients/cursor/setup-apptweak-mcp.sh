@@ -4,7 +4,8 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 REPO_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 CONFIG_PATH="${CURSOR_MCP_CONFIG:-$HOME/.cursor/mcp.json}"
-SERVER_KEY='apptweak api'
+SERVER_KEY='apptweak-api'
+LEGACY_SERVER_KEY='apptweak api'
 API_KEY="${APPTWEAK_API_KEY:-YOUR_APPTWEAK_API_KEY}"
 
 if [ "$API_KEY" = "YOUR_APPTWEAK_API_KEY" ]; then
@@ -15,7 +16,7 @@ fi
 
 NEW_SERVER_JSON=$(node -e "
   const spec = require('$REPO_ROOT/shared/spec/mcp-server.json');
-  const server = structuredClone(spec.mcpServers['apptweak api']);
+  const server = structuredClone(spec.mcpServers['apptweak-api']);
   server.env.APPTWEAK_API_KEY = process.argv[1];
   process.stdout.write(JSON.stringify(server));
 " "$API_KEY")
@@ -29,15 +30,17 @@ node -e "
   const fs = require('fs');
   const target = process.argv[1];
   const serverKey = process.argv[2];
-  const newServer = JSON.parse(process.argv[3]);
+  const legacyServerKey = process.argv[3];
+  const newServer = JSON.parse(process.argv[4]);
   let config = { mcpServers: {} };
   if (fs.existsSync(target)) {
     try { config = JSON.parse(fs.readFileSync(target, 'utf8')); } catch { config = { mcpServers: {} }; }
   }
   if (!config.mcpServers) config.mcpServers = {};
+  delete config.mcpServers[legacyServerKey];
   config.mcpServers[serverKey] = newServer;
   fs.writeFileSync(target, JSON.stringify(config, null, 2) + '\n');
-" "$CONFIG_PATH" "$SERVER_KEY" "$NEW_SERVER_JSON"
+" "$CONFIG_PATH" "$SERVER_KEY" "$LEGACY_SERVER_KEY" "$NEW_SERVER_JSON"
 
 echo "AppTweak MCP configured at: $CONFIG_PATH"
 echo "Restart Cursor to load the new MCP server."

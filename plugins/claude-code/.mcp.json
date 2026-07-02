@@ -1,6 +1,6 @@
 {
   "mcpServers": {
-    "apptweak api": {
+    "apptweak-api": {
       "command": "npx",
       "args": [
         "-y",

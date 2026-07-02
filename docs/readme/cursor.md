@@ -37,7 +37,7 @@ Add to `~/.cursor/mcp.json`:
 ```json
 {
   "mcpServers": {
-    "apptweak api": {
+    "apptweak-api": {
       "command": "npx",
       "args": [
         "-y",
@@ -56,11 +56,11 @@ Add to `~/.cursor/mcp.json`:
 
 ## Verify setup
 
-Restart Cursor and confirm `apptweak api` appears in MCP settings.
+Restart Cursor and confirm `apptweak-api` appears in MCP settings.
 
 ## Restart Cursor
 
-Restart Cursor after changing MCP configuration. The server appears as **apptweak api** in MCP settings.
+Restart Cursor after changing MCP configuration. The server appears as **apptweak-api** in MCP settings.
 
 ## Troubleshooting
 

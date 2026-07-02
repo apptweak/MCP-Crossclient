@@ -46,7 +46,7 @@ CODEX_MCP_SCOPE=project APPTWEAK_API_KEY=your-key ./clients/codex/setup-apptweak
 Add to `~/.codex/config.toml`:
 
 ```toml
-[mcp_servers."apptweak api"]
+[mcp_servers.apptweak-api]
 command = "npx"
 args = ["-y", "mcp-remote", "https://developers.apptweak.com/mcp", "--header", "X-Apptweak-Key: ${APPTWEAK_API_KEY}"]
 env = { APPTWEAK_API_KEY = "YOUR_APPTWEAK_API_KEY" }
@@ -56,7 +56,7 @@ For project-scoped config, use `.codex/config.toml` in a **trusted** project.
 
 ## Verify setup
 
-Restart Codex and verify `apptweak api` appears via `codex mcp list` or `/plugins`.
+Restart Codex and verify `apptweak-api` appears via `codex mcp list` or `/plugins`.
 
 ## Restart Codex
 

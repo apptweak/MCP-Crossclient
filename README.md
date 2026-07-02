@@ -11,7 +11,7 @@ This repository packages the plugins and setup tooling for each supported client
 1. **Get your API key** from your AppTweak account — see [Get your API key](docs/readme/get-api-key.md).
 2. **Pick your client** and run the setup script or install the plugin.
 3. **Restart** your AI tool.
-4. **Confirm** the `apptweak api` MCP server appears in your client.
+4. **Confirm** the `apptweak-api` MCP server appears in your client.
 
 ```bash
 # Example: Cursor on Linux/macOS

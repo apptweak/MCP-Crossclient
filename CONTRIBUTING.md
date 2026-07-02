@@ -38,7 +38,7 @@ lefthook run pre-commit  # run the pre-commit hook group without committing
 ## Validation before PR
 
 - Manually verify setup for the client(s) you changed.
-- Confirm the MCP server appears as `apptweak api` after restart.
+- Confirm the MCP server appears as `apptweak-api` after restart.
 
 ## Support boundaries
 

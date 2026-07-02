@@ -43,7 +43,7 @@ CLAUDE_MCP_SCOPE=project APPTWEAK_API_KEY=your-key ./clients/claude-code/setup-a
 ```json
 {
   "mcpServers": {
-    "apptweak api": {
+    "apptweak-api": {
       "command": "npx",
       "args": [
         "-y",
@@ -66,7 +66,7 @@ Use the same `mcpServers` block. Project-scoped servers require one-time approva
 
 ## Verify setup
 
-Start a new Claude Code session and run `/mcp` to confirm `apptweak api` is connected.
+Start a new Claude Code session and run `/mcp` to confirm `apptweak-api` is connected.
 
 ## Restart Claude Code
 
