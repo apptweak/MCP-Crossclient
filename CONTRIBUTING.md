@@ -1,13 +1,13 @@
 # Contributing
 
-This repository contains official AppTweak MCP integration assets. It is currently private during development.
+This repository contains official AppTweak MCP integration assets.
 
 ## What to change here
 
 - Plugin packages under `plugins/`
 - Client setup scripts under `clients/`
 - Shared spec and examples under `shared/`
-- ReadMe doc sources under `docs/readme/`
+- Documentation sources under `docs/readme/`
 
 ## What not to commit
 

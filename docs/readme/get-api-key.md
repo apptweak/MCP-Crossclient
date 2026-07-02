@@ -4,10 +4,12 @@ AppTweak MCP integrations use **Bring Your Own Key (BYOK)** authentication. Each
 
 ## Steps
 
-1. Sign in to [AppTweak](https://www.apptweak.com).
-2. Open the **API** section in the Rails tool.
-3. Copy your API key (`api_token`) from the dashboard header.
+1. Sign in to your [AppTweak](https://www.apptweak.com) account.
+2. Open the **API** section of your account.
+3. Copy your personal API key (`api_token`).
 4. Use this key as `APPTWEAK_API_KEY` in your MCP client configuration.
+
+If you don't see an API section or aren't sure your plan includes API access, contact your AppTweak account manager or [AppTweak support](https://www.apptweak.com).
 
 ## Security
 

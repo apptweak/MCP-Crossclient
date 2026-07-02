@@ -9,7 +9,7 @@ Connect Cursor to the AppTweak API documentation and execution tools via MCP.
 
 ## Option A — Install the official plugin (recommended)
 
-1. Add this repository as a Cursor plugin marketplace source (private during development).
+1. Add this repository as a Cursor plugin marketplace source.
 2. Install the **AppTweak API** plugin from the marketplace.
 3. When prompted, enter your API key as `APPTWEAK_API_KEY`.
 

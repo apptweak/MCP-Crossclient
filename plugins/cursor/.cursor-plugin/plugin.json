@@ -7,7 +7,7 @@
     "name": "AppTweak",
     "email": "support@apptweak.com"
   },
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "keywords": ["cursor", "mcp", "apptweak", "api", "aso"],
   "homepage": "https://developers.apptweak.com/reference/mcp-1"
 }

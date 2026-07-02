@@ -7,7 +7,7 @@
     "email": "support@apptweak.com"
   },
   "homepage": "https://developers.apptweak.com/reference/mcp-1",
-  "license": "MIT",
+  "license": "GPL-3.0-only",
   "keywords": ["codex", "mcp", "apptweak", "api", "aso"],
   "mcpServers": "./.mcp.json",
   "interface": {
