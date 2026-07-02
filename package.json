@@ -4,5 +4,13 @@
   "version": "0.1.0",
   "description": "Official AppTweak MCP integrations for Cursor, Claude Code, and Codex",
   "type": "module",
-  "scripts": {}
+  "scripts": {
+    "prepare": "lefthook install",
+    "secrets": "./scripts/gitleaks.sh git --config .gitleaks.toml --verbose",
+    "secrets:staged": "./scripts/gitleaks.sh protect --staged --config .gitleaks.toml --verbose"
+  },
+  "devDependencies": {
+    "@nogoo9/gitleaks": "^8.30.1-post.2",
+    "lefthook": "^2.1.9"
+  }
 }

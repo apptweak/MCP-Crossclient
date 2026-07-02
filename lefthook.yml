@@ -1,0 +1,8 @@
+# Secret scanning — local equivalent of apptweak/apptweak-gh-workflows gitleaks CI.
+# Install: npm install && npm run prepare
+# Test all files: npm run secrets
+
+pre-commit:
+  commands:
+    gitleaks:
+      run: ./scripts/gitleaks.sh protect --staged --config .gitleaks.toml

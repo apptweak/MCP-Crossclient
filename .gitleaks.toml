@@ -1,0 +1,12 @@
+title = "MCP-Crossclient gitleaks config"
+
+[extend]
+useDefault = true
+
+[[allowlists]]
+description = "Documented placeholder API key values in examples and setup guides"
+regexTarget = "line"
+regexes = [
+  '''YOUR_APPTWEAK_API_KEY''',
+  '''your-key''',
+]
