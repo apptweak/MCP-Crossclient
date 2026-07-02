@@ -4,7 +4,7 @@ Official AppTweak MCP integrations for Cursor, Claude Code, and Codex.
 
 Install this and your AI coding assistant can query **AppTweak** — the app store intelligence and App Store Optimization (ASO) platform — directly from your editor: keyword rankings and search volume, app metadata and category rankings, download and revenue estimates, ratings and reviews, and competitive intelligence across the **Apple App Store** and **Google Play**. Ask your agent a question in plain language and it pulls live data from the AppTweak API, then helps you turn it into dashboards, reports, and extraction scripts.
 
-This repository packages the plugins and setup tooling for each supported client. It uses the [Model Context Protocol (MCP)](https://modelcontextprotocol.io), an open standard for connecting AI assistants to external tools and data.
+This repository packages official plugins for Cursor and Claude Code plus setup tooling for each supported client. It uses the [Model Context Protocol (MCP)](https://modelcontextprotocol.io), an open standard for connecting AI assistants to external tools and data.
 
 ## Quickstart (2 minutes)
 
@@ -33,7 +33,7 @@ Full API reference: [developers.apptweak.com](https://developers.apptweak.com).
 ## Repository layout
 
 ```
-plugins/          Official plugin packages (Cursor, Claude Code, Codex)
+plugins/          Official plugin packages (Cursor, Claude Code)
 clients/          Manual setup scripts and config examples
 shared/spec/      Canonical MCP server config
 docs/readme/      Setup and usage documentation
@@ -45,7 +45,7 @@ docs/readme/      Setup and usage documentation
 |--------|-------------|-------------|
 | Cursor | `plugins/cursor` | `.cursor-plugin/marketplace.json` |
 | Claude Code | `plugins/claude-code` | Claude plugin marketplace (when published) |
-| Codex | `plugins/codex` | `.agents/plugins/marketplace.json` |
+| Codex | Manual setup only | `docs/readme/codex.md` |
 
 ## Authentication
 

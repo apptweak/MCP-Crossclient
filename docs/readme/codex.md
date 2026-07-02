@@ -7,22 +7,7 @@ Connect Codex to the AppTweak API documentation and execution tools via MCP.
 - Node.js 18+ with `npx`
 - An [AppTweak API key](get-api-key.md)
 
-## Option A — Install the official plugin (recommended)
-
-1. Add this repository as a Codex plugin marketplace source:
-
-   ```bash
-   codex plugin marketplace add ./path/to/MCP-Crossclient
-   ```
-
-2. Open the plugin directory in Codex (`/plugins`) and install **AppTweak API**.
-3. When prompted, enter your API key as `APPTWEAK_API_KEY`.
-
-Plugin package: `plugins/codex`
-
-Marketplace file: `.agents/plugins/marketplace.json`
-
-## Option B — CLI setup
+## Option A — CLI setup (recommended)
 
 ```bash
 codex mcp add apptweak-api \
@@ -31,7 +16,7 @@ codex mcp add apptweak-api \
   --header "X-Apptweak-Key: \${APPTWEAK_API_KEY}"
 ```
 
-## Option C — Setup script
+## Option B — Setup script
 
 ```bash
 # User scope (~/.codex/config.toml)
@@ -41,7 +26,7 @@ APPTWEAK_API_KEY=your-key ./clients/codex/setup-apptweak-mcp.sh
 CODEX_MCP_SCOPE=project APPTWEAK_API_KEY=your-key ./clients/codex/setup-apptweak-mcp.sh
 ```
 
-## Option D — Manual TOML
+## Option C — Manual TOML
 
 Add to `~/.codex/config.toml`:
 
