@@ -30,6 +30,7 @@ Common issues when setting up AppTweak MCP across Cursor, Claude Code, and Codex
 ### Codex
 
 - **Project config ignored**: Project must be trusted. Untrusted projects skip `.codex/config.toml`.
+- **Plugin not in directory**: Run `codex plugin marketplace list` to verify marketplace is loaded. Restart Codex.
 - **TOML syntax error**: Ensure the server section header is `[mcp_servers.apptweak-api]`.
 
 ## Quick verification

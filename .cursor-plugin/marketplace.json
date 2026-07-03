@@ -6,7 +6,7 @@
   },
   "metadata": {
     "description": "Official AppTweak MCP plugins for Cursor",
-    "version": "0.1.2"
+    "version": "0.1.1"
   },
   "plugins": [
     {

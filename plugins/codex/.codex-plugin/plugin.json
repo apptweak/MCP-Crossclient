@@ -1,0 +1,21 @@
+{
+  "name": "apptweak-api",
+  "version": "0.1.1",
+  "description": "Connect Codex to the AppTweak API via MCP. Requires a per-user API key.",
+  "author": {
+    "name": "AppTweak",
+    "email": "support@apptweak.com"
+  },
+  "homepage": "https://developers.apptweak.com/reference/mcp-1",
+  "license": "GPL-3.0-only",
+  "keywords": ["codex", "mcp", "apptweak", "api", "aso"],
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "AppTweak API",
+    "shortDescription": "AppTweak API documentation and execution via MCP",
+    "longDescription": "Browse AppTweak API docs, search endpoints, and execute requests from Codex using your per-user API key.",
+    "developerName": "AppTweak",
+    "category": "Productivity",
+    "websiteURL": "https://developers.apptweak.com/reference/mcp-1"
+  }
+}

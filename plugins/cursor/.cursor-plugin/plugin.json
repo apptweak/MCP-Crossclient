@@ -1,7 +1,7 @@
 {
   "name": "apptweak-api",
   "displayName": "AppTweak API",
-  "version": "0.1.2",
+  "version": "0.1.1",
   "description": "Connect Cursor to the AppTweak API via MCP. Requires a per-user API key.",
   "author": {
     "name": "AppTweak",
