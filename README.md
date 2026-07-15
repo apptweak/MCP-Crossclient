@@ -1,3 +1,5 @@
+[![Listed on ClaudePluginHub](https://www.claudepluginhub.com/badge/apptweak-apptweak-api-plugins-claude-code)](https://www.claudepluginhub.com/plugins/apptweak-apptweak-api-plugins-claude-code?ref=badge)
+
 # AppTweak MCP
 
 Official AppTweak MCP integrations for Cursor, Claude Code, and Codex.
