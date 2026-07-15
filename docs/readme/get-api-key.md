@@ -7,7 +7,9 @@ AppTweak MCP integrations use **Bring Your Own Key (BYOK)** authentication. Each
 1. Sign in to your [AppTweak](https://www.apptweak.com) account.
 2. Open the **API** section of your account.
 3. Copy your personal API key (`api_token`).
-4. Use this key as `APPTWEAK_API_KEY` in your MCP client configuration.
+4. Use this key with the MCP setup curl command copied from `app.apptweak.com`.
+
+If you prefer, you can manually set the same key directly in your client config headers.
 
 If you don't see an API section or aren't sure your plan includes API access, contact your AppTweak account manager or [AppTweak support](https://www.apptweak.com).
 

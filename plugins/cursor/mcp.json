@@ -1,16 +1,9 @@
 {
   "mcpServers": {
     "apptweak-api": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://developers.apptweak.com/mcp",
-        "--header",
-        "X-Apptweak-Key: ${APPTWEAK_API_KEY}"
-      ],
-      "env": {
-        "APPTWEAK_API_KEY": "YOUR_APPTWEAK_API_KEY"
+      "url": "https://developers.apptweak.com/mcp",
+      "headers": {
+        "X-Apptweak-Key": "YOUR_APPTWEAK_API_KEY"
       }
     }
   }

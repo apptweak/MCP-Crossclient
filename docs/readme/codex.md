@@ -4,19 +4,13 @@ Connect Codex to the AppTweak API documentation and execution tools via MCP.
 
 ## Prerequisites
 
-- Node.js 18+ with `npx`
 - An [AppTweak API key](get-api-key.md)
 
 ## Option A — Install the official plugin (recommended)
 
-1. Add this repository as a Codex plugin marketplace source:
-
-   ```bash
-   codex plugin marketplace add ./path/to/MCP-Crossclient
-   ```
-
-2. Open the plugin directory in Codex (`/plugins`) and install **AppTweak API**.
-3. When prompted, enter your API key as `APPTWEAK_API_KEY`.
+1. Install the plugin from Codex Marketplace once published: [codex-marketplace.com](https://www.codex-marketplace.com/).
+2. In AppTweak (`app.apptweak.com`), copy the MCP setup curl command and run it in your terminal.
+3. Restart Codex.
 
 Plugin package: `plugins/codex`
 
@@ -25,21 +19,14 @@ Marketplace file: `.agents/plugins/marketplace.json`
 ## Option B — CLI setup
 
 ```bash
-codex mcp add apptweak-api \
-  --env APPTWEAK_API_KEY=your-key \
-  -- npx -y mcp-remote https://developers.apptweak.com/mcp \
-  --header "X-Apptweak-Key: \${APPTWEAK_API_KEY}"
+codex mcp add apptweak-api --url https://developers.apptweak.com/mcp
 ```
 
-## Option C — Setup script
+## Option C — Run AppTweak curl setup
 
-```bash
-# User scope (~/.codex/config.toml)
-APPTWEAK_API_KEY=your-key ./clients/codex/setup-apptweak-mcp.sh
-
-# Project scope (.codex/config.toml in trusted project)
-CODEX_MCP_SCOPE=project APPTWEAK_API_KEY=your-key ./clients/codex/setup-apptweak-mcp.sh
-```
+1. Go to AppTweak (`app.apptweak.com`) MCP setup.
+2. Copy the generated curl command.
+3. Paste and run it in your terminal.
 
 ## Option D — Manual TOML
 
@@ -47,12 +34,13 @@ Add to `~/.codex/config.toml`:
 
 ```toml
 [mcp_servers.apptweak-api]
-command = "npx"
-args = ["-y", "mcp-remote", "https://developers.apptweak.com/mcp", "--header", "X-Apptweak-Key: ${APPTWEAK_API_KEY}"]
-env = { APPTWEAK_API_KEY = "YOUR_APPTWEAK_API_KEY" }
+url = "https://developers.apptweak.com/mcp"
+http_headers = { "X-Apptweak-Key" = "YOUR_APPTWEAK_API_KEY" }
 ```
 
 For project-scoped config, use `.codex/config.toml` in a **trusted** project.
+
+You can also skip curl and manually set `http_headers["X-Apptweak-Key"]` to your API key.
 
 ## Verify setup
 

@@ -4,14 +4,13 @@ Connect Claude Code to the AppTweak API documentation and execution tools via MC
 
 ## Prerequisites
 
-- Node.js 18+ with `npx`
 - An [AppTweak API key](get-api-key.md)
 
 ## Option A — Install the official plugin (recommended)
 
-1. Install the **AppTweak API** plugin from the Claude Code plugin marketplace (when published).
-2. When prompted, enter your API key as `APPTWEAK_API_KEY`.
-3. Enable the plugin if it ships with `defaultEnabled: false`.
+1. Install the plugin from Claude Plugin Hub: [claudepluginhub.com/plugins/apptweak-apptweak-api-plugins-claude-code](https://www.claudepluginhub.com/plugins/apptweak-apptweak-api-plugins-claude-code).
+2. In AppTweak (`app.apptweak.com`), copy the MCP setup curl command and run it in your terminal.
+3. Enable the plugin if it ships with `defaultEnabled: false`, then restart Claude Code.
 
 Plugin package: `plugins/claude-code`
 
@@ -20,21 +19,14 @@ For local testing, point Claude Code at the plugin folder or use `claude mcp add
 ## Option B — CLI setup
 
 ```bash
-claude mcp add --scope user apptweak-api \
-  --env APPTWEAK_API_KEY=your-key \
-  -- npx -y mcp-remote https://developers.apptweak.com/mcp \
-  --header "X-Apptweak-Key: ${APPTWEAK_API_KEY}"
+claude mcp add-json apptweak-api '{"type":"http","url":"https://developers.apptweak.com/mcp","headers":{"X-Apptweak-Key":"YOUR_APPTWEAK_API_KEY"}}'
 ```
 
-## Option C — Setup script
+## Option C — Run AppTweak curl setup
 
-```bash
-# User scope (~/.claude.json)
-APPTWEAK_API_KEY=your-key ./clients/claude-code/setup-apptweak-mcp.sh
-
-# Project scope (.mcp.json in repo root)
-CLAUDE_MCP_SCOPE=project APPTWEAK_API_KEY=your-key ./clients/claude-code/setup-apptweak-mcp.sh
-```
+1. Go to AppTweak (`app.apptweak.com`) MCP setup.
+2. Copy the generated curl command.
+3. Paste and run it in your terminal.
 
 ## Option D — Manual JSON
 
@@ -44,16 +36,10 @@ CLAUDE_MCP_SCOPE=project APPTWEAK_API_KEY=your-key ./clients/claude-code/setup-a
 {
   "mcpServers": {
     "apptweak-api": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://developers.apptweak.com/mcp",
-        "--header",
-        "X-Apptweak-Key: ${APPTWEAK_API_KEY}"
-      ],
-      "env": {
-        "APPTWEAK_API_KEY": "YOUR_APPTWEAK_API_KEY"
+      "type": "http",
+      "url": "https://developers.apptweak.com/mcp",
+      "headers": {
+        "X-Apptweak-Key": "YOUR_APPTWEAK_API_KEY"
       }
     }
   }
@@ -63,6 +49,8 @@ CLAUDE_MCP_SCOPE=project APPTWEAK_API_KEY=your-key ./clients/claude-code/setup-a
 ### Project scope (`.mcp.json` at repo root)
 
 Use the same `mcpServers` block. Project-scoped servers require one-time approval — run `/mcp` to approve.
+
+You can also skip curl and manually set `headers["X-Apptweak-Key"]` to your API key.
 
 ## Verify setup
 

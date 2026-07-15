@@ -5,7 +5,6 @@ This repository contains official AppTweak MCP integration assets.
 ## What to change here
 
 - Plugin packages under `plugins/`
-- Client setup scripts under `clients/`
 - Shared spec and examples under `shared/`
 - Documentation sources under `docs/readme/`
 
@@ -39,6 +38,7 @@ lefthook run pre-commit  # run the pre-commit hook group without committing
 
 - Manually verify setup for the client(s) you changed.
 - Confirm the MCP server appears as `apptweak-api` after restart.
+- Confirm runtime config uses native HTTPS (`url = https://developers.apptweak.com/mcp`), not `npx mcp-remote`.
 
 ## Support boundaries
 

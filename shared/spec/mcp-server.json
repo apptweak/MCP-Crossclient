@@ -1,37 +1,27 @@
 {
   "$comment": "Canonical AppTweak MCP server definition. Referenced by all client plugins and setup guides.",
   "serverKey": "apptweak-api",
+  "legacyServerKey": "apptweak api",
   "endpoint": "https://developers.apptweak.com/mcp",
   "docsUrl": "https://developers.apptweak.com/reference/mcp-1",
   "apiKeyUrl": "https://www.apptweak.com/en/aso-tools/api",
-  "proxy": {
-    "command": "npx",
-    "args": [
-      "-y",
-      "mcp-remote",
-      "https://developers.apptweak.com/mcp",
-      "--header",
-      "X-Apptweak-Key: ${APPTWEAK_API_KEY}"
-    ]
-  },
   "auth": {
-    "envVar": "APPTWEAK_API_KEY",
+    "type": "header",
     "header": "X-Apptweak-Key",
     "placeholder": "YOUR_APPTWEAK_API_KEY"
   },
   "mcpServers": {
     "apptweak-api": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "mcp-remote",
-        "https://developers.apptweak.com/mcp",
-        "--header",
-        "X-Apptweak-Key: ${APPTWEAK_API_KEY}"
-      ],
-      "env": {
-        "APPTWEAK_API_KEY": "YOUR_APPTWEAK_API_KEY"
+      "url": "https://developers.apptweak.com/mcp",
+      "headers": {
+        "X-Apptweak-Key": "YOUR_APPTWEAK_API_KEY"
       }
+    }
+  },
+  "codexServer": {
+    "url": "https://developers.apptweak.com/mcp",
+    "http_headers": {
+      "X-Apptweak-Key": "YOUR_APPTWEAK_API_KEY"
     }
   }
 }
