@@ -10,7 +10,7 @@ This repository packages the plugins and configuration examples for each support
 
 ## Quickstart (2 minutes)
 
-1. **Get your API key** from your AppTweak account — see [Get your API key](docs/readme/get-api-key.md).
+1. **Get your API key** from your AppTweak account — see [Get your API key](docs/get-api-key.md).
 2. **Install the AppTweak plugin** for your client:
    - Cursor: [cursor.directory/plugins/apptweak-mcp-plugins](https://cursor.directory/plugins/apptweak-mcp-plugins)
    - Claude Code: [claudepluginhub.com/plugins/apptweak-apptweak-api-plugins-claude-code](https://www.claudepluginhub.com/plugins/apptweak-apptweak-api-plugins-claude-code)
@@ -25,11 +25,11 @@ If you prefer, skip the script and manually add your API key in client config (`
 
 | Topic | Guide |
 |-------|-------|
-| Get your API key | [docs/readme/get-api-key.md](docs/readme/get-api-key.md) |
-| Cursor | [docs/readme/cursor.md](docs/readme/cursor.md) |
+| Get your API key | [docs/get-api-key.md](docs/get-api-key.md) |
+| Cursor | [plugins/cursor/README.md](plugins/cursor/README.md) |
 | Claude Code | [plugins/claude-code/README.md](plugins/claude-code/README.md) |
-| Codex | [docs/readme/codex.md](docs/readme/codex.md) |
-| Troubleshooting | [docs/readme/troubleshooting.md](docs/readme/troubleshooting.md) |
+| Codex | [plugins/codex/README.md](plugins/codex/README.md) |
+| Troubleshooting | [docs/troubleshooting.md](docs/troubleshooting.md) |
 
 Full API reference: [developers.apptweak.com](https://developers.apptweak.com).
 
@@ -39,7 +39,7 @@ Full API reference: [developers.apptweak.com](https://developers.apptweak.com).
 plugins/          Official plugin packages (Cursor, Claude Code, Codex)
 clients/          Manual configuration examples
 shared/spec/      Canonical MCP server config
-docs/readme/      Setup and usage documentation
+docs/             Setup and usage documentation
 ```
 
 ## Plugin packages
@@ -58,7 +58,7 @@ docs/readme/      Setup and usage documentation
 
 ## Support
 
-- Troubleshooting: [docs/readme/troubleshooting.md](docs/readme/troubleshooting.md)
+- Troubleshooting: [docs/troubleshooting.md](docs/troubleshooting.md)
 - Issues: GitHub Issues on this repository
 
 ## License

@@ -6,7 +6,7 @@ This repository contains official AppTweak MCP integration assets.
 
 - Plugin packages under `plugins/`
 - Shared spec and examples under `shared/`
-- Documentation sources under `docs/readme/`
+- Documentation sources under `docs/`
 
 ## What not to commit
 

@@ -4,7 +4,7 @@ Connect Cursor to the AppTweak API documentation and execution tools via MCP.
 
 ## Prerequisites
 
-- An [AppTweak API key](get-api-key.md)
+- An [AppTweak API key](../../docs/get-api-key.md)
 
 ## Option A — Install the official plugin (recommended)
 
@@ -49,4 +49,4 @@ Restart Cursor after changing MCP configuration. The server appears as **apptwea
 
 ## Troubleshooting
 
-See [troubleshooting.md](troubleshooting.md).
+See [troubleshooting.md](../../docs/troubleshooting.md).
