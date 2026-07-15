@@ -4,7 +4,7 @@ Connect Claude Code to the AppTweak API documentation and execution tools via MC
 
 ## Prerequisites
 
-- An [AppTweak API key](get-api-key.md)
+- An [AppTweak API key](../../docs/readme/get-api-key.md)
 
 ## Option A — Install the official plugin (recommended)
 
@@ -62,4 +62,4 @@ Start a new Claude Code session after changing MCP configuration. Run `/mcp` to 
 
 ## Troubleshooting
 
-See [troubleshooting.md](troubleshooting.md).
+See [troubleshooting.md](../../docs/readme/troubleshooting.md).

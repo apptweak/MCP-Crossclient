@@ -8,7 +8,7 @@ Connect Codex to the AppTweak API documentation and execution tools via MCP.
 
 ## Option A — Install the official plugin (recommended)
 
-1. Install the plugin from Codex Marketplace once published: [codex-marketplace.com](https://www.codex-marketplace.com/).
+1. Install the plugin from Codex Marketplace: [codex-marketplace.com](https://www.codex-marketplace.com/).
 2. In AppTweak (`app.apptweak.com`), copy the MCP setup curl command and run it in your terminal.
 3. Restart Codex.
 

@@ -14,7 +14,7 @@ This repository packages the plugins and configuration examples for each support
 2. **Install the AppTweak plugin** for your client:
    - Cursor: [cursor.directory/plugins/apptweak-mcp-plugins](https://cursor.directory/plugins/apptweak-mcp-plugins)
    - Claude Code: [claudepluginhub.com/plugins/apptweak-apptweak-api-plugins-claude-code](https://www.claudepluginhub.com/plugins/apptweak-apptweak-api-plugins-claude-code)
-   - Codex: Codex Marketplace (link pending publication)
+   - Codex: [codex-marketplace.com](https://www.codex-marketplace.com/)
 3. **From AppTweak (`app.apptweak.com`) copy and run the curl setup command** to patch only `X-Apptweak-Key` in the existing AppTweak MCP entry.
 4. **Restart** your AI tool.
 5. **Confirm** the `apptweak-api` MCP server appears in your client.
@@ -27,7 +27,7 @@ If you prefer, skip the script and manually add your API key in client config (`
 |-------|-------|
 | Get your API key | [docs/readme/get-api-key.md](docs/readme/get-api-key.md) |
 | Cursor | [docs/readme/cursor.md](docs/readme/cursor.md) |
-| Claude Code | [docs/readme/claude-code.md](docs/readme/claude-code.md) |
+| Claude Code | [plugins/claude-code/README.md](plugins/claude-code/README.md) |
 | Codex | [docs/readme/codex.md](docs/readme/codex.md) |
 | Troubleshooting | [docs/readme/troubleshooting.md](docs/readme/troubleshooting.md) |
 
@@ -47,7 +47,7 @@ docs/readme/      Setup and usage documentation
 | Client | Plugin path | Marketplace |
 |--------|-------------|-------------|
 | Cursor | `plugins/cursor` | `.cursor-plugin/marketplace.json` |
-| Claude Code | `plugins/claude-code` | Claude plugin marketplace (when published) |
+| Claude Code | `plugins/claude-code` | Claude plugin marketplace |
 | Codex | `plugins/codex` | `.agents/plugins/marketplace.json` |
 
 ## Authentication

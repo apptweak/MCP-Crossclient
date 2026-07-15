@@ -22,5 +22,5 @@ If you don't see an API section or aren't sure your plan includes API access, co
 ## Next steps
 
 - [Cursor setup](cursor.md)
-- [Claude Code setup](claude-code.md)
+- [Claude Code setup](../../plugins/claude-code/README.md)
 - [Codex setup](codex.md)
