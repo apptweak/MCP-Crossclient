@@ -10,5 +10,5 @@
   "license": "GPL-3.0-only",
   "keywords": ["claude", "mcp", "apptweak", "api", "aso"],
   "mcpServers": "./.mcp.json",
-  "defaultEnabled": false
+  "defaultEnabled": true
 }
