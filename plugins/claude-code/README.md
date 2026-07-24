@@ -4,6 +4,8 @@
 
 Connect Claude Code to the AppTweak API documentation and execution tools via MCP.
 
+This plugin also includes the `apptweak-dashboard-builder` skill for building dashboards that pair live AppTweak data with other sources.
+
 ## Prerequisites
 
 - An [AppTweak API key](../../docs/get-api-key.md)
