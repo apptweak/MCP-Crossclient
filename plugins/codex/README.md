@@ -6,13 +6,14 @@ This plugin also includes the `apptweak-dashboard-builder` skill for building da
 
 ## Prerequisites
 
-- An [AppTweak API key](../../docs/get-api-key.md)
+- An AppTweak account
 
 ## Option A — Install the official plugin (recommended)
 
 1. Install the plugin from Codex Marketplace: [codex-marketplace.com](https://www.codex-marketplace.com/).
-2. In AppTweak (`app.apptweak.com`), copy the MCP setup curl command and run it in your terminal.
-3. Restart Codex.
+2. Select **Authenticate** for `apptweak-api`, or run `codex mcp login apptweak-api`.
+3. Sign in to AppTweak in the browser and approve access.
+4. Start a new Codex session.
 
 Plugin package: `plugins/codex`
 
@@ -21,36 +22,31 @@ Marketplace file: `.agents/plugins/marketplace.json`
 ## Option B — CLI setup
 
 ```bash
-codex mcp add apptweak-api --url https://developers.apptweak.com/mcp
+codex mcp add apptweak-api --url https://app.apptweak.com/api/mcp
+codex mcp login apptweak-api
 ```
 
-## Option C — Run AppTweak curl setup
-
-1. Go to AppTweak (`app.apptweak.com`) MCP setup.
-2. Copy the generated curl command.
-3. Paste and run it in your terminal.
-
-## Option D — Manual TOML
+## Option C — Manual TOML
 
 Add to `~/.codex/config.toml`:
 
 ```toml
 [mcp_servers.apptweak-api]
-url = "https://developers.apptweak.com/mcp"
-http_headers = { "X-Apptweak-Key" = "YOUR_APPTWEAK_API_KEY" }
+url = "https://app.apptweak.com/api/mcp"
+auth = "oauth"
 ```
 
 For project-scoped config, use `.codex/config.toml` in a **trusted** project.
 
-You can also skip curl and manually set `http_headers["X-Apptweak-Key"]` to your API key.
+After saving the configuration, run `codex mcp login apptweak-api` to authenticate.
 
 ## Verify setup
 
-Restart Codex and verify `apptweak-api` appears via `codex mcp list` or `/plugins`.
+Start a new Codex session and verify `apptweak-api` is authenticated via `codex mcp list`, `/mcp`, or `/plugins`.
 
 ## Restart Codex
 
-Restart Codex after changing MCP configuration. Verify with `codex mcp list` or `/plugins`.
+If authorization expires, run `codex mcp logout apptweak-api` followed by `codex mcp login apptweak-api`.
 
 ## Troubleshooting
 

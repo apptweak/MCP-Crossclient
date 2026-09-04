@@ -2,5 +2,5 @@
 # Target: ~/.codex/config.toml (user) or .codex/config.toml (trusted project)
 
 [mcp_servers.apptweak-api]
-url = "https://developers.apptweak.com/mcp"
-http_headers = { "X-Apptweak-Key" = "YOUR_APPTWEAK_API_KEY" }
+url = "https://app.apptweak.com/api/mcp"
+auth = "oauth"

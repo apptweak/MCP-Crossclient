@@ -10,7 +10,7 @@ This repository contains official AppTweak MCP integration assets.
 
 ## What not to commit
 
-- Real API keys (`APPTWEAK_API_KEY`)
+- OAuth access tokens, refresh tokens, authorization codes, or client secrets
 - Customer-specific data
 - Local `.env` files
 
@@ -38,9 +38,10 @@ lefthook run pre-commit  # run the pre-commit hook group without committing
 
 - Manually verify setup for the client(s) you changed.
 - Confirm the MCP server appears as `apptweak-api` after restart.
-- Confirm runtime config uses native HTTPS (`url = https://developers.apptweak.com/mcp`), not `npx mcp-remote`.
+- Confirm runtime config uses native HTTPS (`url = https://app.apptweak.com/api/mcp`), not `npx mcp-remote`.
+- Confirm the server authenticates through OAuth and no static auth headers are configured.
 
 ## Support boundaries
 
-- Users manage their own API keys in the AppTweak API dashboard.
-- Do not ask users to share full API keys in issues or PRs.
+- Users authorize their own AppTweak accounts through their MCP client.
+- Do not ask users to share OAuth tokens or authorization codes in issues or PRs.

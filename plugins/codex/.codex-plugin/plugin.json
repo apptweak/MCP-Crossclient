@@ -1,7 +1,7 @@
 {
   "name": "apptweak-api",
-  "version": "0.1.4",
-  "description": "Connect Codex to the AppTweak API via MCP. Requires a per-user API key.",
+  "version": "0.2.0",
+  "description": "Connect Codex to the AppTweak API through an OAuth-protected MCP server.",
   "author": {
     "name": "AppTweak",
     "email": "support@apptweak.com"
@@ -14,9 +14,15 @@
   "interface": {
     "displayName": "AppTweak API",
     "shortDescription": "AppTweak API documentation and execution via MCP",
-    "longDescription": "Browse AppTweak API docs, search endpoints, and execute requests from Codex using your per-user API key.",
+    "longDescription": "Browse AppTweak API docs, search endpoints, and execute requests from Codex after signing in to AppTweak with OAuth.",
     "developerName": "AppTweak",
     "category": "Productivity",
-    "websiteURL": "https://developers.apptweak.com/reference/mcp-1"
+    "capabilities": ["Read"],
+    "websiteURL": "https://developers.apptweak.com/reference/mcp-1",
+    "defaultPrompt": [
+      "Use AppTweak to find keyword opportunities for my app.",
+      "Compare my app with competitors using live AppTweak data.",
+      "Build a dashboard that pairs AppTweak data with my CSV."
+    ]
   }
 }

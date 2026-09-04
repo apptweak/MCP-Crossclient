@@ -2,10 +2,7 @@
   "mcpServers": {
     "apptweak-api": {
       "type": "http",
-      "url": "https://developers.apptweak.com/mcp",
-      "headers": {
-        "X-Apptweak-Key": "YOUR_APPTWEAK_API_KEY"
-      }
+      "url": "https://app.apptweak.com/api/mcp"
     }
   }
 }

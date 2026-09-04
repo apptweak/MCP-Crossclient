@@ -5,10 +5,9 @@ node_modules/
 .tmp/
 *.backup.*
 
-# Secrets — never commit real API keys
+# Local environment and secrets
 .env
 .env.*
-!.env.example
 
 # OS / editor
 .DS_Store
