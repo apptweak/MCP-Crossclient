@@ -1,7 +1,7 @@
 {
   "name": "apptweak-api",
-  "version": "0.1.4",
-  "description": "Connect Claude Code to the AppTweak API via MCP. Requires a per-user API key.",
+  "version": "0.2.0",
+  "description": "Connect Claude Code to the AppTweak API through an OAuth-protected MCP server.",
   "author": {
     "name": "AppTweak",
     "email": "support@apptweak.com"

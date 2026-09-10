@@ -6,23 +6,17 @@ This plugin also includes the `apptweak-dashboard-builder` skill for building da
 
 ## Prerequisites
 
-- An [AppTweak API key](../../docs/get-api-key.md)
+- An AppTweak account
 
 ## Option A — Install the official plugin (recommended)
 
 1. Install the plugin from Cursor Directory: [cursor.directory/plugins/apptweak-mcp-plugins](https://cursor.directory/plugins/apptweak-mcp-plugins).
-2. In AppTweak (`app.apptweak.com`), copy the MCP setup curl command and run it in your terminal.
-3. Restart Cursor.
+2. Open Cursor's MCP settings and authenticate `apptweak-api`.
+3. Sign in to AppTweak in the browser and approve access.
 
 Plugin package: `plugins/cursor`
 
-## Option B — Run AppTweak curl setup
-
-1. Go to AppTweak (`app.apptweak.com`) MCP setup.
-2. Copy the generated curl command.
-3. Paste and run it in your terminal.
-
-### Manual JSON
+## Option B — Manual JSON
 
 Add to `~/.cursor/mcp.json`:
 
@@ -30,24 +24,21 @@ Add to `~/.cursor/mcp.json`:
 {
   "mcpServers": {
     "apptweak-api": {
-      "url": "https://developers.apptweak.com/mcp",
-      "headers": {
-        "X-Apptweak-Key": "YOUR_APPTWEAK_API_KEY"
-      }
+      "url": "https://app.apptweak.com/api/mcp"
     }
   }
 }
 ```
 
-You can also skip curl and manually set `headers["X-Apptweak-Key"]` to your API key.
+After saving the configuration, open Cursor's MCP settings and authenticate `apptweak-api`.
 
 ## Verify setup
 
-Restart Cursor and confirm `apptweak-api` appears in MCP settings.
+Confirm `apptweak-api` appears as connected and authenticated in MCP settings.
 
 ## Restart Cursor
 
-Restart Cursor after changing MCP configuration. The server appears as **apptweak-api** in MCP settings.
+Restart Cursor if it does not reload the MCP configuration automatically.
 
 ## Troubleshooting
 

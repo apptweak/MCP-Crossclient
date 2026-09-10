@@ -2,26 +2,18 @@
   "$comment": "Canonical AppTweak MCP server definition. Referenced by all client plugins and setup guides.",
   "serverKey": "apptweak-api",
   "legacyServerKey": "apptweak api",
-  "endpoint": "https://developers.apptweak.com/mcp",
+  "endpoint": "https://app.apptweak.com/api/mcp",
   "docsUrl": "https://developers.apptweak.com/reference/mcp-1",
-  "apiKeyUrl": "https://www.apptweak.com/en/aso-tools/api",
   "auth": {
-    "type": "header",
-    "header": "X-Apptweak-Key",
-    "placeholder": "YOUR_APPTWEAK_API_KEY"
+    "type": "oauth"
   },
   "mcpServers": {
     "apptweak-api": {
-      "url": "https://developers.apptweak.com/mcp",
-      "headers": {
-        "X-Apptweak-Key": "YOUR_APPTWEAK_API_KEY"
-      }
+      "url": "https://app.apptweak.com/api/mcp"
     }
   },
   "codexServer": {
-    "url": "https://developers.apptweak.com/mcp",
-    "http_headers": {
-      "X-Apptweak-Key": "YOUR_APPTWEAK_API_KEY"
-    }
+    "url": "https://app.apptweak.com/api/mcp",
+    "auth": "oauth"
   }
 }

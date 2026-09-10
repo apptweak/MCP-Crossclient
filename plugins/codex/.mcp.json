@@ -1,8 +1,8 @@
 {
-  "apptweak-api": {
-    "url": "https://developers.apptweak.com/mcp",
-    "http_headers": {
-      "X-Apptweak-Key": "YOUR_APPTWEAK_API_KEY"
+  "mcpServers": {
+    "apptweak-api": {
+      "url": "https://app.apptweak.com/api/mcp",
+      "auth": "oauth"
     }
   }
 }

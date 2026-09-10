@@ -8,13 +8,13 @@ This plugin also includes the `apptweak-dashboard-builder` skill for building da
 
 ## Prerequisites
 
-- An [AppTweak API key](../../docs/get-api-key.md)
+- An AppTweak account
 
 ## Option A — Install the official plugin (recommended)
 
 1. Install the plugin from Claude Plugin Hub: [claudepluginhub.com/plugins/apptweak-apptweak-api-plugins-claude-code](https://www.claudepluginhub.com/plugins/apptweak-apptweak-api-plugins-claude-code).
-2. In AppTweak (`app.apptweak.com`), copy the MCP setup curl command and run it in your terminal.
-3. Enable the plugin if it ships with `defaultEnabled: false`, then restart Claude Code.
+2. Start a new Claude Code session and run `/mcp`.
+3. Authenticate `apptweak-api`, then sign in to AppTweak and approve access in the browser.
 
 Plugin package: `plugins/claude-code`
 
@@ -23,16 +23,11 @@ For local testing, point Claude Code at the plugin folder or use `claude mcp add
 ## Option B — CLI setup
 
 ```bash
-claude mcp add-json apptweak-api '{"type":"http","url":"https://developers.apptweak.com/mcp","headers":{"X-Apptweak-Key":"YOUR_APPTWEAK_API_KEY"}}'
+claude mcp add --transport http --scope user apptweak-api https://app.apptweak.com/api/mcp
+claude mcp login apptweak-api
 ```
 
-## Option C — Run AppTweak curl setup
-
-1. Go to AppTweak (`app.apptweak.com`) MCP setup.
-2. Copy the generated curl command.
-3. Paste and run it in your terminal.
-
-## Option D — Manual JSON
+## Option C — Manual JSON
 
 ### User scope (`~/.claude.json`)
 
@@ -41,10 +36,7 @@ claude mcp add-json apptweak-api '{"type":"http","url":"https://developers.apptw
   "mcpServers": {
     "apptweak-api": {
       "type": "http",
-      "url": "https://developers.apptweak.com/mcp",
-      "headers": {
-        "X-Apptweak-Key": "YOUR_APPTWEAK_API_KEY"
-      }
+      "url": "https://app.apptweak.com/api/mcp"
     }
   }
 }
@@ -54,15 +46,15 @@ claude mcp add-json apptweak-api '{"type":"http","url":"https://developers.apptw
 
 Use the same `mcpServers` block. Project-scoped servers require one-time approval — run `/mcp` to approve.
 
-You can also skip curl and manually set `headers["X-Apptweak-Key"]` to your API key.
+After approving a project-scoped server, authenticate it from `/mcp` or run `claude mcp login apptweak-api`.
 
 ## Verify setup
 
-Start a new Claude Code session and run `/mcp` to confirm `apptweak-api` is connected.
+Start a new Claude Code session and run `/mcp` to confirm `apptweak-api` is connected and authenticated.
 
 ## Restart Claude Code
 
-Start a new Claude Code session after changing MCP configuration. Run `/mcp` to verify the server is connected.
+If authorization expires, run `claude mcp logout apptweak-api` followed by `claude mcp login apptweak-api`.
 
 ## Troubleshooting
 
